@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Justica.Web</name>
+    </assembly>
+    <members>
+        <member name="T:Justica.Web.Controllers.CalculosController">
+            <summary>
+            API 2
+            </summary>
+        </member>
+        <member name="M:Justica.Web.Controllers.CalculosController.CalculaJuros(CalcTest.Application.InputModels.CalculaJurosInputModel)">
+            <summary>
+            Calcula Juros
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Justica.Web.Controllers.CalculosController.ShowMeTheCode">
+            <summary>
+            Show me the code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Justica.Web.Controllers.TaxasController">
+            <summary>
+            API 1
+            </summary>
+        </member>
+        <member name="M:Justica.Web.Controllers.TaxasController.GetTaxaJuros">
+            <summary>
+            Retorna taxa de juros
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
