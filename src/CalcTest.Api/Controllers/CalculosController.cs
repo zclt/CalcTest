@@ -29,8 +29,14 @@ namespace CalcTest.Api.Controllers
         [HttpGet("CalculaJuros")]
         public ActionResult CalculaJuros([FromQuery] CalculaJurosInputModel input)
         {
-            var valorFinal = _calculosService.CalculaJuros(input.ValorInicial, input.Meses);
-            return Ok(valorFinal.ToString("0.##"));
+            try
+            {
+                var valorFinal = _calculosService.CalculaJuros(input.ValorInicial, input.Meses);
+                return Ok(valorFinal.ToString("0.00"));
+            } catch (Exception e)
+            {
+                return BadRequest(e);
+            }
         }
 
         /// <summary>
@@ -40,7 +46,7 @@ namespace CalcTest.Api.Controllers
         [HttpGet("ShowMeTheCode")]
         public ActionResult ShowMeTheCode()
         {
-            return Ok("url:");
+            return Ok("https://github.com/zclt/CalcTest");
         }
     }
 }

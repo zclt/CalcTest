@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Justica.Web": {
+    "CalcTest.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
