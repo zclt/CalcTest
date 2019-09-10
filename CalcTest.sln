@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E9CDDD2E-DC8C-4390-A95D-9A2E8652A71F}"
 EndProject
@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C795C0D6-8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcTest.Test", "test\CalcTest.Test\CalcTest.Test.csproj", "{DF13BB91-7545-4788-B393-D43C25B95BC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcTest.TesteIntegracao", "src\CalcTest.TesteIntegracao\CalcTest.TesteIntegracao.csproj", "{D9220023-3B37-42F4-8452-813094391EB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcTest.TesteIntegracao", "src\CalcTest.TesteIntegracao\CalcTest.TesteIntegracao.csproj", "{D9220023-3B37-42F4-8452-813094391EB7}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{83E8DA2C-D931-4973-BFB6-3D7787F6D438}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{D9220023-3B37-42F4-8452-813094391EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9220023-3B37-42F4-8452-813094391EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9220023-3B37-42F4-8452-813094391EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E8DA2C-D931-4973-BFB6-3D7787F6D438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E8DA2C-D931-4973-BFB6-3D7787F6D438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E8DA2C-D931-4973-BFB6-3D7787F6D438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E8DA2C-D931-4973-BFB6-3D7787F6D438}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
