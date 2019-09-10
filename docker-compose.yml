@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  calctest.api:
+    image: ${DOCKER_REGISTRY-}calctestapi
+    build:
+      context: .
+      dockerfile: src/CalcTest.Api/Dockerfile
