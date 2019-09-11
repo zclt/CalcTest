@@ -15,23 +15,40 @@ namespace CalcTest.Test.Services
         public CalculosServiceTest()
         {
             var _taxasService = new Mock<ITaxasService>();
-            _taxasService.Setup(t => t.GetTaxaJuros()).Returns(0.01);
+            _taxasService.Setup(t => t.GetTaxaJuros()).Returns(0.01d);
 
             _service = new CalculosService(_taxasService.Object);
         }
 
-        [Fact]
-        public void CalcCalculaJurosTest()
+        [Theory]
+        [InlineData(100.00, 5, 105.10)]
+        [InlineData(100.00, 9, 109.36)]
+        [InlineData(100.00, 11, 111.56)]
+        [InlineData(100.00, 48, 161.22)]
+        public void CalcCalculaJurosTest(double valorInicial, int meses, double valorFinal)
         {
             //arrange
-            var valorInicial = 100.00;
-            var meses = 5;
-
             //act
-            var valorFinal = _service.CalculaJuros(valorInicial, meses);
+            var result = _service.CalculaJuros(valorInicial, meses);
 
             //assert
-            Assert.Equal(105.10, valorFinal);
+            Assert.Equal(valorFinal, result);
+        }
+
+        [Fact]
+        public void CalcCalculaJurosZeroValuesTest()
+        {
+            //arrange & act & assert
+            Assert.Throws<ArgumentException>(() => _service.CalculaJuros(100.00, 0));
+            Assert.Throws<ArgumentException>(() => _service.CalculaJuros(0, 5));
+        }
+
+        [Fact]
+        public void CalcCalculaJurosNegativeValuesTest()
+        {
+            //arrange & act & assert
+            Assert.Throws<ArgumentException>(() => _service.CalculaJuros(-100.00, 5));
+            Assert.Throws<ArgumentException>(() => _service.CalculaJuros(100.00, -5));
         }
     }
 }
