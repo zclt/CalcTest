@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CalcTest.Api\CalcTest.Api.csproj" />
+    <ProjectReference Include="..\..\src\CalcTest.Api\CalcTest.Api.csproj" />
   </ItemGroup>
 
 </Project>
